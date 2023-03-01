@@ -57,3 +57,16 @@ git commit -m "commit message"
 ## Task 3 Integrate SonarCloud into your Azure Devops and integrate it into the pull request process
 
 - We go to the market place and install the sonar cloud extention
+![Alt text](images/let's%20go%20to%20market.png)
+![Alt text](images/Sonar%20cloud%20extention.png)
+- let's 
+![Alt text](images/install%20sonar%20cloud.png)
+
+- Let's get our PAT(Personal Access Token)
+![Alt text](images/get%20PAT%20step%201.png)
+- we can acuatll define the permission in the custom option beut for this project we will go with full access
+![Alt text](images/get%20PAT%20step%202.png)
+![Alt text](images/get%20PAT%20step%203.png)
+![Alt text](images/get%20PAT%20step%204.png)
+![Alt text](images/get%20PAT%20step%205.png)
+![Alt text](images/get%20PAT%20step%206.png)
