@@ -8,8 +8,7 @@
 - Install Terraform 
 
 
-## Task 1
-Generate a Sample dotnetCore Project and fork a Python Sample app from a git repository
+## Task 1 Generate a Sample dotnetCore Project and fork a Python Sample app from a git repository
 - make a new directory and cd into it
 use the command below to generate a sample dotnet template
 ```sh
@@ -22,8 +21,7 @@ dotnet new webapp
 From here 
 ![Alt text](images/fork%20python%20code.png)
 >Link to repo: https://github.com/RussMaxwell/PythonWebApp
-## Task 2 
-Create a New Azure Repo in Azure DevOps and clone your existing .Net Core App source code
+## Task 2 Create a New Azure Repo in Azure DevOps and clone your existing .Net Core App source code
 - Create a microsoft account 
 - Create a new AzureDevops account
 - create an organisation
@@ -52,7 +50,10 @@ git commit -m <commit message>
 ```
 
 - now paste the previously copied code from the project repo to the Terminal
-code looks like this:
-```sh
+- it should bring a git credential page login, input your details
+- refresh the web browser, you should see the files 
+![Alt text](images/after%20refreshing.png)
 
-```
+## Task 3 Integrate SonarCloud into your Azure Devops and integrate it into the pull request process
+
+- We go to the makerte and install the sonar cloud extention
