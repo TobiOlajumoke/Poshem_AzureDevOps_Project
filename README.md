@@ -46,7 +46,7 @@ git add .
 ```
 commit those changes:
 ```sh
-git commit -m <commit message>
+git commit -m "commit message"
 ```
 
 - now paste the previously copied code from the project repo to the Terminal
@@ -56,4 +56,4 @@ git commit -m <commit message>
 
 ## Task 3 Integrate SonarCloud into your Azure Devops and integrate it into the pull request process
 
-- We go to the makerte and install the sonar cloud extention
+- We go to the market place and install the sonar cloud extention
