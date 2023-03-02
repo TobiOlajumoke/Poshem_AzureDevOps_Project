@@ -148,3 +148,12 @@ we are gonna see the pull request scan in out sonarcloud
 ![Alt text](images/wait%20a%20bit.png)
 ![Alt text](images/wait%20a%20bit%20the%20pull%20request%20triggeed%20a%20build.png)
 
+- merge it to the master branch
+![Alt text](images/complete%20the%20pull%20request%20after%20successful%20build.png)
+![Alt text](images/complete%20merge.png)
+- check sonarcloud webpage 
+ ![Alt text](images/sonario%20pullrequest%20refresh.png)
+
+ 
+- we'll see we have fully integrated sonarcloud it into the pull request process
+![Alt text](images/pull%20request%20with%20sonar%20cloud%20complete.png)
