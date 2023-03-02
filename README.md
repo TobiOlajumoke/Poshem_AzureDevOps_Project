@@ -105,3 +105,19 @@ git commit -m "commit message"
 - **We'll set the Prepare analysis on the cloud job and  fill the highlited boxes with the data given from the sonarcloud.io**
 ![Alt text](images/fill%20sonar%20pipeline%20info.png)
 ![Alt text](images/save%20and%20queue.png)
+**Incase your build fails try rearrangeing the agent order like this :**
+![Alt text](images/incase.png)
+- Our build is succesful now let's return to sonarcloud.io and refresh
+![Alt text](images/success%20ful%20build.png)
+- **Resfresh the webpage**
+![Alt text](images/sonarcloud%20refresh.png)
+- **Steps to take to setup Build validation**
+
+![Alt text](images/to%20project%20settings.png)
+![Alt text](images/pull%20request%20repo.png)
+![Alt text](images/pull%20request%20policy.png)
+![Alt text](images/pull%20request%20bracnch%20policy.png)
+![Alt text](images/pull%20request%20branch%20protection.png)
+![Alt text](images/build%20validation.png)
+![Alt text](images/final.png)
+
