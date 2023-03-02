@@ -122,8 +122,21 @@ git commit -m "commit message"
 ![Alt text](images/final.png)
 
 - **We going to set up pull request in the sonar cloud setting**
-**Administration > General settings > Pul request**
+**Administration > General settings > Pull request**
 
 ![Alt text](images/sonar%20io%20pullrequest.png)
 ![Alt text](images/sonar%20io%20pullrequest%202.png)
 ![Alt text](images/sonar%20io%20pullrequest%20PAT.png)
+
+we are gonna see the pull request scan in out sonarcloud
+- Now we create a branch
+![Alt text](images/New%20branch.png)
+![Alt text](images/workitem.png)
+![Alt text](images/enter%20the%20branch.png)
+
+- make an edit in the C file
+![Alt text](images/make%20a%20comment%20in%20C.png)
+![Alt text](images/make%20a%20commit%202.png)
+![Alt text](images/make%20a%20comment%20in%20C%20(3).png)
+
+
