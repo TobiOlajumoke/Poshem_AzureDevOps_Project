@@ -121,3 +121,9 @@ git commit -m "commit message"
 ![Alt text](images/build%20validation.png)
 ![Alt text](images/final.png)
 
+- **We going to set up pull request in the sonar cloud setting**
+**Administration > General settings > Pul request**
+
+![Alt text](images/sonar%20io%20pullrequest.png)
+![Alt text](images/sonar%20io%20pullrequest%202.png)
+![Alt text](images/sonar%20io%20pullrequest%20PAT.png)
