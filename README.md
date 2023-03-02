@@ -56,17 +56,52 @@ git commit -m "commit message"
 
 ## Task 3 Integrate SonarCloud into your Azure Devops and integrate it into the pull request process
 
-- We go to the market place and install the sonar cloud extention
+- **We go to the market place and install the sonar cloud extention**
 ![Alt text](images/let's%20go%20to%20market.png)
 ![Alt text](images/Sonar%20cloud%20extention.png)
-- let's 
 ![Alt text](images/install%20sonar%20cloud.png)
 
-- Let's get our PAT(Personal Access Token)
+- **Let's get our PAT(Personal Access Token)**
 ![Alt text](images/get%20PAT%20step%201.png)
-- we can acuatll define the permission in the custom option beut for this project we will go with full access
+
 ![Alt text](images/get%20PAT%20step%202.png)
+- we can actualy define the permission in the custom option but for this project we will go with full access
 ![Alt text](images/get%20PAT%20step%203.png)
+
+- Vist https://sonarcloud.io/signin and sigin in with your Azure devops account
+
+- Analyse a new project
+![Alt text](images/sonar%20cloud%20analyse%20new%20project.png)
+- import the project you want by filling up the below:
+
+![Alt text](images/Sonario%20Import%20project.png)
+
+- **We are to fill the name of our oganisation and the previously copied PAT and proceed to next page**
+![Alt text](images/sonar%20cloud%20org%20and%20pat%20input.png)
+![Alt text](images/soanar%20tocken.png)
+- **Go to the pipeline a build a new one with classic editor**
+![Alt text](images/Sonar%20cloud%20pipline%20build.png)
+![Alt text](images/build%20pipline%20setup.png)
+![Alt text](images/use%20classic%20editor.png)
+![Alt text](images/classic%20editor.png)
+- **Scroll and pick the NetCore sonar cloud**
+![Alt text](images/scroll%20pick%20NETCORE%20with%20sinarcoud.png)
+- **Now we set it up, pick the Azure pool and Agent specification you want the code to run there's Mac,Linux and Windows with various Specifications. I am using Windows Latest**
+![Alt text](images/pipline%20build.png)
+- **here i define the parameter where it should restore and build `csporj`**
+![Alt text](images/poshem%20pipe%20csporj.png)
+
+
+
+- **We shall be creating sonarcloud service connection here**
+![Alt text](images/to%20project%20settings.png)
 ![Alt text](images/get%20PAT%20step%204.png)
 ![Alt text](images/get%20PAT%20step%205.png)
 ![Alt text](images/get%20PAT%20step%206.png)
+- **Here we will be  add the token given from sonarcloud.io here and give our connection on a name**
+![Alt text](images/soanar%20tocken.png)
+![Alt text](images/Connection%20Sonar%20cloud.png)
+
+- **We'll set the Prepare analysis on the cloud job and  fill the highlited boxes with the data given from the sonarcloud.io**
+![Alt text](images/fill%20sonar%20pipeline%20info.png)
+![Alt text](images/save%20and%20queue.png)
