@@ -140,3 +140,11 @@ we are gonna see the pull request scan in out sonarcloud
 ![Alt text](images/make%20a%20comment%20in%20C%20(3).png)
 
 
+- create a pull request  
+![Alt text](images/create%20pull%20request.png)
+![Alt text](images/create%20pull%20request%201.png)
+
+- Wait for the build to complete
+![Alt text](images/wait%20a%20bit.png)
+![Alt text](images/wait%20a%20bit%20the%20pull%20request%20triggeed%20a%20build.png)
+
