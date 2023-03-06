@@ -154,6 +154,40 @@ we are gonna see the pull request scan in out sonarcloud
 - check sonarcloud webpage 
  ![Alt text](images/sonario%20pullrequest%20refresh.png)
 
- 
+
 - we'll see we have fully integrated sonarcloud it into the pull request process
 ![Alt text](images/pull%20request%20with%20sonar%20cloud%20complete.png)
+
+
+## Task 4 - Integrate Mend (Formerly White-source) for code quality and vulnerabilities issues with your code.
+
+- **We go to the Market place and install MEND formerly know as white source bolt**
+
+- **Select the free version and install inside your organisation**
+- Go to project settings
+
+- Under extention see MEND
+
+- Set it up
+
+- Go to pipeline 
+
+
+- edit previously built pipeline
+
+
+- Add mend to agent job
+
+- save and queue
+
+- after a successful build
+
+- go back to mend under extentions 
+
+- Mend results
+
+
+
+
+
+
