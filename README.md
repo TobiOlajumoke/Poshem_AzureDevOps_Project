@@ -162,13 +162,14 @@ we are gonna see the pull request scan in out sonarcloud
 ## Task 4 - Integrate Mend (Formerly White-source) for code quality and vulnerabilities issues with your code.
 
 - **We go to the Market place and install MEND formerly know as white source bolt**
-
+![Alt text](images/market%20place.png)
 - **Select the free version and install inside your organisation**
-- Go to project settings
-
-- Under extention see MEND
+![Alt text](images/free%20mendbolt.png)
+- Go to organisation settings and under extention see MEND
+![Alt text](images/orgnaisation%20level%20MEND.png) 
 
 - Set it up
+![Alt text](images/fill%20it%20up.png)
 
 - Go to pipeline 
 
