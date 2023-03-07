@@ -171,21 +171,27 @@ we are gonna see the pull request scan in out sonarcloud
 - Set it up
 ![Alt text](images/fill%20it%20up.png)
 
-- Go to pipeline 
+- Go to pipeline and edit pipeline
+![Alt text](images/edit%20pipline%20and%20add%20mend.png)
 
+- add mend bolt to agent job 
+![Alt text](images/add%20men%20to%20agent%20job.png)
 
-- edit previously built pipeline
-
-
-- Add mend to agent job
+- search and add mend bolt
+![Alt text](images/mend%20bolt.png)
 
 - save and queue
+![Alt text](images/mendbolt%20complete%20build.png)
 
-- after a successful build
+- after a successful build check:
+![Alt text](images/mend%20bolt%201%20&%202.png)
+![Alt text](images/mend%20bolt%203.png)
+![Alt text](images/mend%20bolt%204.png)
 
-- go back to mend under extentions 
 
 - Mend results
+![Alt text](images/mend%20bolt%20result.png)
+
 
 
 
