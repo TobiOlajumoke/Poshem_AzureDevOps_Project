@@ -193,6 +193,67 @@ we are gonna see the pull request scan in out sonarcloud
 ![Alt text](images/mend%20bolt%20result.png)
 
 
+## **Task 5 Create a basic build pipeline from a template and set the trigger settings to invoke a continuous integration build and verify the build completed successfully along with the code quality result from sonar-cloud and mend-bolt **
+
+- From the previous task we have built a dotnet pipeline an have intergrated sonarcloud and Mend bolt. 
+ 
+ 
+Now to set a trigger to invole a continuous intergration build 
+
+- Firstly go to pipeline
+![Alt text](images/ci%20trigger%201.png)
+
+- edit the existing pipline 
+
+![Alt text](images/dotnet%20webapp%20template.png)
+
+- go to the triger tab and enable continous intergration
+![Alt text](images/go%20to%20the%20trigger%20tab.png)
+![Alt text](images/save%20and%20queue%20ci%20trigger.png)
+
+- add a commit message and click run
+![Alt text](images/comment%20save%20and%20run.png)
+
+- after a successful build let's check out Mend bolt and sonarcloud
+
+- Mend Bolt result:
+![Alt text](images/mendbolt%20no%20risk.png)
+
+- Sonarcloud result:
+![Alt text](images/sonarcloud%20result.png)
+![Alt text](images/sonarcloud%20result2.png)
+
+
+## **Task 6 Install Terraform on your Local computer on Google or using Chocolatey**
+
+I'll be installing terraform using chocolatey from my terminal
+
+- go to the official [chocolatey website](https://chocolatey.org/install)
+
+- using the powershell with administrative access paste:
+
+```sh
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+- after chocolatey is installed use te below command to install Terraform on windows
+
+To install it
+```sh
+choco install terraform
+```
+
+![Alt text](images/terraform%20installed.png)
+
+To update it
+```sh
+choco upgrade terraform
+```
+
+To uninstall it
+```sh
+choco uninstall terraform
+```
 
 
 
