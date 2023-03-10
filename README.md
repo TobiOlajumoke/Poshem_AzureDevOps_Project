@@ -256,6 +256,45 @@ choco uninstall terraform
 ```
 
 
+## Task 7 
+Set the Terraform Backends and Provider and Provision 
+an Azure App Service Plan, 
+An Azure App Service, 
+An Azure App Service for container, 
+Azure Container Registry, 
+Azure Container instance and 
+Azure Kubernetes Service
+
+
+The terraform scrpit to set:
+>Azure App Service Plan and An Azure App Service 
+
+```js
+provider "azurerm" {
+  features {}
+}
+
+# create service plan
+resource "azurerm_service_plan" "posh" {
+  name                = "poshplan"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  os_type             = "Windows"
+  sku_name            = "B1"
+}
+
+
+# create webapp
+resource "azurerm_windows_web_app" "webapp" {
+  name                = "poshem-webapp"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  service_plan_id     = azurerm_service_plan.posh.id
+
+  site_config {}
+}
+
+```
 
 
 
