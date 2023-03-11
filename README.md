@@ -258,7 +258,7 @@ choco uninstall terraform
 
 ## Task 7 
 Set the Terraform Backends and Provider and Provision 
-an Azure App Service Plan, 
+an Azure App Service Plan
 An Azure App Service, 
 An Azure App Service for container, 
 Azure Container Registry, 
@@ -266,35 +266,208 @@ Azure Container instance and
 Azure Kubernetes Service
 
 
-The terraform scrpit to set:
->Azure App Service Plan and An Azure App Service 
 
-```js
-provider "azurerm" {
-  features {}
-}
+### Firstly we need a resource group
+refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group
+![Alt text](images/terra%201.png)
+- After setting up the main.tf and variable.tf 
 
-# create service plan
-resource "azurerm_service_plan" "posh" {
-  name                = "poshplan"
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  os_type             = "Windows"
-  sku_name            = "B1"
-}
+- run a `terraform build` if there is no error
 
+- run a `terraform apply`
 
-# create webapp
-resource "azurerm_windows_web_app" "webapp" {
-  name                = "poshem-webapp"
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  service_plan_id     = azurerm_service_plan.posh.id
+- type yes 
 
-  site_config {}
-}
+![Alt text](../../Pictures/terra%203.png)
 
-```
+![Alt text](images/Terrabuild.png)
+
+![Alt text](images/Terraapply.png)
+
+- check the azure portal for the new created resource
+![Alt text](images/poshemRG.png)
+
+- ### Azure App Service Plan and An Azure App Service 
 
 
+>refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
 
+![Alt text](images/serviceplan%20&%20webappplan%20code.png)
+- After setting up the main.tf and variable.tf 
+
+- run a `terraform plan` if there is no error
+
+- run a `terraform apply`
+
+- type yes 
+![Alt text](images/serviceplan%20&%20webappplan.png)
+
+- check the azure portal for the new created resource
+![Alt text](images/serviceplan%20&%20webappplan%20portal.png)
+
+
+### An Azure App Service for container
+
+>refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_app
+
+
+- After setting up the main.tf and variable.tf 
+![Alt text](images/conatinerapp%201.png)
+- run a `terraform plan` if there is no error
+![Alt text](images/conatinerapp%202.png)
+- run a `terraform apply`
+
+- type yes 
+![Alt text](images/conatinerapp%203.png)
+
+- check the azure portal for the new created resource
+![Alt text](images/conatinerapp%204.png)
+
+
+
+### Azure Container Registry
+
+>refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry
+
+
+- After setting up the main.tf and variable.tf 
+![Alt text](images/container%20registry%201.png)
+- run a `terraform plan` if there is no error
+![Alt text](images/container%20registry%202.png)
+- run a `terraform apply`
+
+- type yes 
+![Alt text](images/container%20registry%203.png)
+
+- check the azure portal for the new created resource
+![Alt text](images/container%20registry%204.png)
+
+
+
+### Azure Container instance
+>refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry
+
+
+- After setting up the main.tf and variable.tf 
+
+- run a `terraform plan` if there is no error
+
+- run a `terraform apply`
+
+- type yes 
+
+
+- check the azure portal for the new created resource
+
+
+
+
+
+
+## Task 8 Create a Release Pipeline and create Three different stage for DEV, QA & Production
+
+- From our previoulsy created repo, let's add a text in the index.cshtml file:
+![Alt text](images/index%20cshtml%20edit.png)
+
+- Go to pipeline and classic editor
+
+![Alt text](images/dqp%20step%201.png)
+
+- click on continue
+![Alt text](images/dqp%20step%202.png)
+
+- select empty job
+![Alt text](images/dqp%20step%2033.png)
+
+- agent job and select dotnet build,restore and publish
+![Alt text](images/dqp%20step%204.png)
+
+- add dotnet core agent job 3 times, edit it add restore and publish 
+![Alt text](images/dqp%20step%205%20three%20times.png)
+- add use dotnet core to the agent job
+![Alt text](images/dqp%20step%207%20dotnet%20core.png)
+![Alt text](images/dqp%20step%208%20add%20dotnet%20core.png)
+- add publish build artifact to agent job
+![Alt text](images/dqp%20step%209%20add%20publish%20build.png)
+- set dotnet build and restore agent jobs path to `**/*.csproj`
+![Alt text](images/dqp%20step%2010%20coonfig%20retore%20path.png)
+![Alt text](images/dqp%20step%2011%20coonfig%20build%20path.png)
+
+- set version of use odtnet job to `7.0x`
+![Alt text](images/dqp%20step%2012%20usedotnet%20version%207.png)
+- paste this in the argument: 
+```sh
+--configuration $(BuildConfiguration) --output
+ $(Build.ArtifactStagingDirectory)
+ ```
+![Alt text](images/dqp%20step%2013%20pulish%20arguments.png)
+![Alt text](images/dqp%20step%2014%20release%20variable.png)
+![Alt text](images/dqp%20step%2015%20trgger%20CI.png)
+![Alt text](images/dqp%20step%2016%20save%20and%20queue.png)
+![Alt text](images/dqp%20step%2017%20commit,save%20and%20run.png)
+
+- create a service plan in the pipeline settings:
+![Alt text](images/service%20connection%201.png)
+![Alt text](images/service%20connection%202.png)
+![Alt text](images/service%20connection%203.png)
+![Alt text](images/service%20connection%204.png)
+
+- Create a release pipeline with the below steps:
+![Alt text](images/dqp%20step%2018%20create%20release%20pipeline.png)
+
+![Alt text](images/release%20pipline%201.png)
+
+![Alt text](images/release%20pipline%202.png)
+
+![Alt text](images/release%20pipline%203.png)
+
+![Alt text](images/release%20pipline%204.png)
+
+![Alt text](images/release%20pipline%205.png)
+
+![Alt text](images/release%20pipline%206.png)
+
+![Alt text](images/release%20pipline%207.png)
+
+![Alt text](images/release%20pipline%208.png)
+
+**The Dev environment would build**
+
+- check the app service for the dev environment
+![Alt text](images/dev%20domain.png)
+- check the domain site
+??
+
+
+- set up QA app service
+![Alt text](images/qa%20appservice.png)
+![Alt text](images/qa%20&%20prod%20appservice.png)
+- enable continous deployment trigger
+![Alt text](images/QA%20release%20setup%20continous%20deployment%20trigger.png)
+
+- set a pre-deployement method
+![Alt text](images/QA%20release%20setup%201.png)
+![Alt text](images/QA%20release%20setup%201.1.png)
+![Alt text](images/QA%20release%20setup%202.png)
+![Alt text](images/QA%20release%20setup%203.png)
+
+- set QA predeployment
+![Alt text](images/predeployment%20qa%201.png)
+
+![Alt text](images/predeployment%20qa%202.png)
+
+![Alt text](images/predeployment%20qa%203.png)
+
+![Alt text](images/predeployment%20qa%204%20after%20push%20new%20commit.png)
+
+- edit the repo index.cshtml
+![Alt text](images/edit%20repo%20index.png)
+![Alt text](images/commit%20and%20save.png)
+
+
+- back to the release pipeline
+![Alt text](images/check%20in%20release%20pipeline.png)
+![Alt text](images/predeployment%20qa%205%20approve.png)
+
+![Alt text](images/predeployment%20qa%206.png)
+![Alt text](images/predeployment%20qa%207.png)
