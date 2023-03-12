@@ -471,3 +471,8 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 ![Alt text](images/predeployment%20qa%206.png)
 ![Alt text](images/predeployment%20qa%207.png)
+
+![Alt text](images/check%20qa%20domain%20result.png)
+
+![Alt text](images/check%20qa%20domain.png)
+![Alt text](images/qa%20success.png)
