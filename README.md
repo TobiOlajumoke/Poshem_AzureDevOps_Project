@@ -366,9 +366,16 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 ## Task 8 Create a Release Pipeline and create Three different stage for DEV, QA & Production
 
+DEV
+![Alt text](images/dev%20env.png)
 
+QA
+![Alt text](images/QA%20env.png)
 
-
+PRODUCTION
+![Alt text](images/Prod%20env.png)
+All environment:
+![Alt text](images/all%20env.png)
 
 
 
@@ -499,7 +506,7 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 - we create production app service plan
 ![Alt text](images/prod%20deployment%20slot%201.png)
-- we go to deployment slot
+- go to deployment slot
 ![Alt text](images/prod%20deployment%20slot%202.png)
 - upgrade the spec to an higher service plan, after the project enusre to terminate all provisoned resources to avoid billings
 ![Alt text](images/prod%20deployment%20slot%203.png)
@@ -512,9 +519,27 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 
 
-
-- edit and add production stage 
-
 - go to the project azure devops release pipeline
-
+![Alt text](images/prod%20stage%201.png)
+- edit and add production stage 
+![Alt text](images/prod%20stage%202.png)
 - configure job task and add deployment slot to job tasks
+![Alt text](images/prod%20stage%203%20deploy%20to%20slot.png)
+
+- go to the repo and make a new commit in the index.cshtml file
+![Alt text](images/edit%20repo%20to%20see%20prod.png)
+- wait for the build to complete
+![Alt text](images/build%20complete.png)
+- go check the release pipeline if it completed
+![Alt text](images/prod%20complete.png)
+- go to azureportal, to the production app service and under deployment slot, click swap
+![Alt text](images/prod%20swap%201.png)
+
+- swap from target = Staging env to target poshemprod
+![Alt text](images/source%20ro%20target.png)
+- after a success message
+![Alt text](images/source%20ro%20target.png%20success.png)
+- check the default domain in the over view section
+![Alt text](images/check%20prod%20domain.png)
+- result
+![Alt text](images/prod%20final%20result.png)
