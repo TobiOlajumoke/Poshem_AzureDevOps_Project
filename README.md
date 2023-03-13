@@ -366,6 +366,18 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 ## Task 8 Create a Release Pipeline and create Three different stage for DEV, QA & Production
 
+
+
+
+
+
+
+
+## Task 9 
+## To implement the code quality restriction on the release pipeline, 
+
+
+
 - From our previoulsy created repo, let's add a text in the index.cshtml file:
 ![Alt text](images/index%20cshtml%20edit.png)
 
@@ -393,7 +405,7 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 ![Alt text](images/dqp%20step%2010%20coonfig%20retore%20path.png)
 ![Alt text](images/dqp%20step%2011%20coonfig%20build%20path.png)
 
-- set version of use odtnet job to `7.0x`
+- set version of use dotnet job to `7.0x`
 ![Alt text](images/dqp%20step%2012%20usedotnet%20version%207.png)
 - paste this in the argument: 
 ```sh
@@ -431,18 +443,23 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 ![Alt text](images/release%20pipline%208.png)
 
-**The Dev environment would build**
+**After a succesful Dev environment deployment**
 
-- check the app service for the dev environment
-![Alt text](images/dev%20domain.png)
-- check the domain site
-??
+- check the app service for the dev environment and check the domain site
+![Alt text](images/dev%20domain%202.png)
+![Alt text](images/dev%20domain%203.png)
 
 
-- set up QA app service
-![Alt text](images/qa%20appservice.png)
-![Alt text](images/qa%20&%20prod%20appservice.png)
-- enable continous deployment trigger
+
+
+
+**Set  a pre-deployment approval in the QA stage.**
+
+
+
+- Fristly set up QA app service
+![Alt text](images/qa%20app%20service%20created.png)
+- go to azure devops/project/to the release pipeline and  enable continous deployment trigger
 ![Alt text](images/QA%20release%20setup%20continous%20deployment%20trigger.png)
 
 - set a pre-deployement method
@@ -470,9 +487,34 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 ![Alt text](images/predeployment%20qa%205%20approve.png)
 
 ![Alt text](images/predeployment%20qa%206.png)
-![Alt text](images/predeployment%20qa%207.png)
 
-![Alt text](images/check%20qa%20domain%20result.png)
-
-![Alt text](images/check%20qa%20domain.png)
 ![Alt text](images/qa%20success.png)
+![Alt text](images/check%20qa%20domain.png)
+![Alt text](images/poshem%20qa%20result.png)
+
+
+
+
+## create a deployment slot (staging slot)  in the Production stage 
+
+- we create production app service plan
+![Alt text](images/prod%20deployment%20slot%201.png)
+- we go to deployment slot
+![Alt text](images/prod%20deployment%20slot%202.png)
+- upgrade the spec to an higher service plan, after the project enusre to terminate all provisoned resources to avoid billings
+![Alt text](images/prod%20deployment%20slot%203.png)
+- add slot 
+![Alt text](images/prod%20deployment%20slot%204%20add%20slot.png)
+- choose a name and add
+![Alt text](images/prod%20deployment%20slot%205%20name%20and%20add.png)
+![Alt text](images/prod%20deployment%20slot%206.png)
+
+
+
+
+
+- edit and add production stage 
+
+- go to the project azure devops release pipeline
+
+- configure job task and add deployment slot to job tasks
