@@ -41,7 +41,7 @@ CMD "python", "app.py"
 
 
 - create a new project in azure devops
-
+![Alt text](images/pythonapp%201.png)
 
 - go to repo and paste the push an existing repo command to vscode cli
 
