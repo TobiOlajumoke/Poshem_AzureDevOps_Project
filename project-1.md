@@ -257,13 +257,12 @@ choco uninstall terraform
 
 
 ## Task 7 
-Set the Terraform Backends and Provider and Provision 
-an Azure App Service Plan
-An Azure App Service, 
-An Azure App Service for container, 
-Azure Container Registry, 
-Azure Container instance and 
-Azure Kubernetes Service
+Set the Terraform Backends and Provider and Provision :
+- An Azure App Service Plan and an Azure App Service 
+- An Azure App Service for container, 
+- Azure Container Registry, 
+- Azure Container instance
+- Azure Kubernetes Service
 
 
 
@@ -345,8 +344,7 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 
 ### Azure Container instance
->refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry
-
+>refrence: 
 
 - After setting up the main.tf and variable.tf 
 
@@ -359,10 +357,21 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 - check the azure portal for the new created resource
 
+### Azure Kubernetes Service
+>refrence: 
 
 
 
+- After setting up the main.tf and variable.tf 
 
+- run a `terraform plan` if there is no error
+
+- run a `terraform apply`
+
+- type yes 
+
+
+- check the azure portal for the new created resource
 
 ## Task 8 Create a Release Pipeline and create Three different stage for DEV, QA & Production
 
@@ -543,3 +552,48 @@ All environment:
 ![Alt text](images/check%20prod%20domain.png)
 - result
 ![Alt text](images/prod%20final%20result.png)
+
+
+## Task 10 Integrate Azure pipeline with Slack
+
+- Navigate to Organization Settings > Security > Policies, and turn on the Third-party application access via OAuth
+
+![Alt text](images/activate%20thirdparty.png)
+![Alt text](images/activate%20thirdparty%202%20.png)
+
+- open a slack account and sign in using the app or your web browser
+
+
+- create a new workspace or use an existing one, i'm creating a new one
+
+- go to the settings and add azure pipelines to any channel of choice using these steps:
+![Alt text](images/azure%20pipline%20connect%201.png)
+![Alt text](images/azure%20pipline%20connect%202.png)
+![Alt text](images/azure%20pipline%20connect%203.png)
+![Alt text](images/azure%20pipline%20connect%204.png)
+![Alt text](images/release%20pipline%205.png)
+![Alt text](images/azure%20pipline%20connect%206.png)
+![Alt text](images/azure%20pipline%20connect%207.png)
+
+- sign in to azure pipeline from the channel
+![Alt text](images/azure%20pipline%20connect%208.png)
+![Alt text](images/azure%20pipline%20connect%209.png)
+![Alt text](images/azure%20pipline%20connect%20copy%20%20code%2011.png)
+![Alt text](images/azure%20pipline%20connect%20enter%20%20code11.png)
+
+![Alt text](images/azure%20pipline%20connect10.png)
+![Alt text](images/azure%20piplin%20succeessfully%20connected.png)
+
+- connect and specify what results you want to see build pipelines or release pipelines and can even specify the exvcat build form the numerous ones you have
+![Alt text](images/my%20build%20url.png)
+
+```sh
+/azpipelines subscribe <build or release url>
+```
+
+
+- now let's trigger a build in our pipeline and see the result reflect in our slack app
+![Alt text](images/after%20a%20succeful%20build%20%20check%20slack.png)
+![Alt text](images/after%20a%20succeful%20build%20%20check%20slack%20result%20.png)
+
+
