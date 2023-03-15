@@ -75,6 +75,19 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 - now go to your azure devops project and initiate a pull request 
 
 
+## Task 5 
+Create a Build pipeline to Build the image and push to Container Registry
+
+
+Create a Release Pipeline to Deploy in Azure web app for containers
+
+
+
+Create a New Stage and Deploy into Azure Container Instance.
+
+g.
+
+
 
 
 
