@@ -7,3 +7,21 @@ You and your team have a requirement by your company to make things more modern 
 
 
 - use `git checkout -b <new branch name>`
+
+![Alt text](images/git%20branch.png)
+
+
+- create a docker file with nano text editor
+`nano dockerfile`
+
+## Task 3 Save and commit your work then push it  to the remote repository in Azure DevOps
+
+
+- create a new project in azure devops
+
+
+- go to repo and paste the push an existing repo command to vscode cli
+
+- check the project repo branch
+
+
