@@ -85,7 +85,7 @@ Create a Release Pipeline to Deploy in Azure web app for containers
 
 Create a New Stage and Deploy into Azure Container Instance.
 
-Task 6 
+## Task 6 
 Create a Build pipeline to Build the image and push to Container Registry and Deploy into Azure Kubernetes Service and then verify your app is up and running.
 
 
