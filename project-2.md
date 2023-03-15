@@ -14,6 +14,28 @@ You and your team have a requirement by your company to make things more modern 
 - create a docker file with nano text editor
 `nano dockerfile`
 
+
+
+## Task 2 Using the Docker Registry as guide for docker command for creating docker file, and depending on the requirement from your company, Create the Dockerfile with the instructions.
+
+- visit https://hub.docker.com/_/microsoft-dotnet-sdk
+
+
+
+
+```sh
+FROM 
+WORKDIR 
+COPY 
+COPY 
+RUN 
+CMD 
+```
+
+- save it ctrl + x and enter
+
+
+
 ## Task 3 Save and commit your work then push it  to the remote repository in Azure DevOps
 
 
@@ -23,5 +45,36 @@ You and your team have a requirement by your company to make things more modern 
 - go to repo and paste the push an existing repo command to vscode cli
 
 - check the project repo branch
+
+
+## Task 4 
+Create a Pull Request to merge your branch and verify Sonar-cloud comment on your changes, and verify it merged successfully.
+
+- Click on repo > branch click on pull request
+
+
+- go to pipelines 
+
+- select classic editor 
+
+
+- add sonar cloud to the ajent job
+
+- enable ci trigger 
+
+- save and queue
+
+- commit and run
+
+- after successful build check sonar cloud
+
+- once confirmed 
+
+- go to sonar cloud project setting set up pullrequest with pat key
+
+- now go to your azure devops project and initiate a pull request 
+
+
+
 
 
