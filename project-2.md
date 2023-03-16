@@ -8,7 +8,7 @@ You and your team have a requirement by your company to make things more modern 
 
 - use `git checkout -b <new branch name>`
 
-![Alt text](images/git%20branch.png)
+
 
 
 - create a docker file with nano text editor
@@ -21,15 +21,15 @@ You and your team have a requirement by your company to make things more modern 
 - visit https://hub.docker.com/_/microsoft-dotnet-sdk
 
 
-
+- add this to the docker file
 
 ```sh
-FROM 
-WORKDIR 
-COPY 
-COPY 
-RUN 
-CMD 
+FROM mcr.microsoft.com/dotnet/sdk:7.0
+RUN dotnet restore --use-current-runtime
+RUN dotnet publish
+WORKDIR /app
+COPY . .
+CMD "dotnet", "dotnet-webapp.csproj"
 ```
 
 - save it ctrl + x and enter
@@ -38,55 +38,58 @@ CMD
 
 ## Task 3 Save and commit your work then push it  to the remote repository in Azure DevOps
 
+- save and commit code
+![Alt text](images/save%20and%20commit.png)
 
 - create a new project in azure devops
 
 
 - go to repo and paste the push an existing repo command to vscode cli
+![Alt text](images/dotnet%20repo.png)
 
 - check the project repo branch
-
+![Alt text](images/dotnet%20docker%20branch.png)
+![Alt text](images/dotnet%20docker%20branch1.png)
 
 ## Task 4 
 Create a Pull Request to merge your branch and verify Sonar-cloud comment on your changes, and verify it merged successfully.
 
+- Go to the project settings 
+![Alt text](images/repo.png)
+- click the repsitory>the dotnetweb app> the policy tab
+![Alt text](images/repo%201.png)
+- click on branch policy
+![Alt text](images/repo%203.png)
+- click on build validation
+![Alt text](images/repo%204.png)
+
+- add a build policy name, leave the rest on default  and save
+![Alt text](images/repo%205.png)
+
+- save and commit 
+![Alt text](images/save%20and%20commit.png)
+
+![Alt text](images/git%20merge%201.png)
+
 - Click on repo > branch click on pull request
 
-
-- go to pipelines 
-
-- select classic editor 
-
-
-- add sonar cloud to the ajent job
-
-- enable ci trigger 
-
-- save and queue
-
-- commit and run
-
-- after successful build check sonar cloud
-
-- once confirmed 
-
-- go to sonar cloud project setting set up pullrequest with pat key
-
-- now go to your azure devops project and initiate a pull request 
-
-
-## Task 5 
-Create a Build pipeline to Build the image and push to Container Registry
-
-
-Create a Release Pipeline to Deploy in Azure web app for containers
+![Alt text](images/pull%20req.png)
+![Alt text](images/pull%20req%201.png)
+![Alt text](images/pull%20req%202.png)
+![Alt text](images/pull%20req%203.png)
 
 
 
-Create a New Stage and Deploy into Azure Container Instance.
+- go to pipelines the pull request would trigger a build 
 
-## Task 6 
-Create a Build pipeline to Build the image and push to Container Registry and Deploy into Azure Kubernetes Service and then verify your app is up and running.
+![Alt text](images/pull%20req%20project%20settings.png)
+
+
+- check result in sonarcloud
+
+![Alt text](images/sonar%20pull%20request.png)
+
+
 
 
 
