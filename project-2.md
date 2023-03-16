@@ -25,11 +25,12 @@ You and your team have a requirement by your company to make things more modern 
 
 ```sh
 FROM mcr.microsoft.com/dotnet/sdk:7.0
-RUN dotnet restore --use-current-runtime
-RUN dotnet publish
 WORKDIR /app
 COPY . .
-CMD "dotnet", "dotnet-webapp.csproj"
+RUN dotnet restore
+RUN dotnet publish -c Release -o out
+ENTRYPOINT ["dotnet", "out/dotnet-webapp.dll"]
+
 ```
 
 - save it ctrl + x and enter
@@ -85,13 +86,23 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 ![Alt text](images/pull%20req%20project%20settings.png)
 
 
-- check result in sonarcloud
+- Check result in sonarcloud
 
 ![Alt text](images/sonar%20pull%20request.png)
 
 
 
 
+## Task 5 
 
+- Create a Build pipeline to Build the image and push to Container Registry
+
+
+
+- Create a Release Pipeline to Deploy in Azure web app for containers
+
+
+
+- Create a New Stage and Deploy into Azure Container Instance.
 
 
