@@ -97,12 +97,23 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 
 - Create a Build pipeline to Build the image and push to Container Registry
 
-
+![Alt text](images/create%20build%20pipeline.png)
+![Alt text](images/create%20build%20pipeline%201.png)
+![Alt text](images/create%20build%20pipeline%202.png)
+![Alt text](images/build%20successful.png)
+![Alt text](images/check%20registry.png)
+![Alt text](images/image%20in%20ACR.png)
 
 - Create a Release Pipeline to Deploy in Azure web app for containers
-
-
-
+![Alt text](images/release%20pipeline%20for%20container%20app.png)
+![Alt text](images/sucess.png)
+![Alt text](images/sucess1.png)
 - Create a New Stage and Deploy into Azure Container Instance.
+
+![Alt text](images/ACI.png)
+![Alt text](images/ACI%201.png)
+![Alt text](images/ACI%20result.png)
+![Alt text](images/ACI%20result1.png)
+
 
 
