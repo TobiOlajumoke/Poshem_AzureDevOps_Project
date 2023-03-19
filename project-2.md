@@ -126,4 +126,7 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 - create release pipeline
 
 - set job task
+
+- save and create release
+
  
