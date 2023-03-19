@@ -124,4 +124,6 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 ![Alt text](images/aks%20build%20image.png)
 
 - create release pipeline
+
+- set job task
  
