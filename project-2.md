@@ -119,17 +119,32 @@ Create a Pull Request to merge your branch and verify Sonar-cloud comment on you
 
 ## Task 6 Create a Build pipeline to Build the image and push to Container Registry and Deploy into Azure Kubernetes Service and then verify your app is up and running.
 
-- build pipline and build image
+- build pipeline and build image
 
 ![Alt text](images/aks%20build%20image.png)
 
-- create release pipeline
 
-- set job task
+- Create release pipeline, set the agent jobs
 
-- save and create release
-
-- after successful build
+![Alt text](images/aks%20release%201.png)
 
 
-- check the portal for results 
+- Successful build
+
+
+![Alt text](images/succesful%20helm%20release.png)
+
+
+- Check the portal for results
+
+![Alt text](images/aks%20in%20portal.png)
+
+
+- Setup kubernetes connection on the powershell terminal
+
+![Alt text](images/external%20ip.png)
+
+
+- Our app is running
+
+![Alt text](images/succesful%20helm%20release.png)
