@@ -343,36 +343,6 @@ refrence: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
 
 
 
-### Azure Container instance
->refrence: 
-
-- After setting up the main.tf and variable.tf 
-
-- run a `terraform plan` if there is no error
-
-- run a `terraform apply`
-
-- type yes 
-
-
-- check the azure portal for the new created resource
-
-### Azure Kubernetes Service
->refrence: 
-
-
-
-- After setting up the main.tf and variable.tf 
-
-- run a `terraform plan` if there is no error
-
-- run a `terraform apply`
-
-- type yes 
-
-
-- check the azure portal for the new created resource
-
 ## Task 8 Create a Release Pipeline and create Three different stage for DEV, QA & Production
 
 DEV
